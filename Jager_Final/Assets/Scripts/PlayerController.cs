@@ -25,5 +25,10 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray.origin, ray.direction, out clickInfo))
                 agent.destination = clickInfo.point;
         }
+
+        if (agent.isOnOffMeshLink)
+        {
+            agent.CompleteOffMeshLink();
+        }
     }
 }
