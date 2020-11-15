@@ -47,5 +47,11 @@ public class PlayerController : MonoBehaviour
         endLink.y = agent.currentOffMeshLinkData.endPos.y + 1;
 
         transform.position = Vector3.Lerp(transform.position, endLink, linkDistance / interpolantValue);
+
+        if (Vector3.Distance(transform.position, endLink) < disconnectMargin)
+        {
+            agent.Warp(endLink);
+            agent.SetDestination(storedTarget);
+        }
     }
 }
