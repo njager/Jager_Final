@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         storedTarget = agent.pathEndPosition;
 
+        //checks for mouse input and location, then sends player to mouse click
         if (Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -33,21 +34,26 @@ public class PlayerController : MonoBehaviour
                 agent.destination = clickInfo.point;
         }
 
+        //if player is on the link, call link function
         if (agent.isOnOffMeshLink)
         {
             CompleteLink();
         }
     }
 
+    //performs the link transition between platforms using LERP
     void CompleteLink()
     {
+        //variables for transition
         Vector3 startLink = agent.currentOffMeshLinkData.startPos;
         Vector3 endLink = agent.currentOffMeshLinkData.endPos;
         float linkDistance = Vector3.Distance(startLink, endLink);
         endLink.y = agent.currentOffMeshLinkData.endPos.y + 1;
 
+        //sets player's new position to other link end via Linear Interpolation, which creates a smooth transition
         transform.position = Vector3.Lerp(transform.position, endLink, linkDistance / interpolantValue);
 
+        //completes the actual link movement as LERP just gets nearer and nearer to end without reaching
         if (Vector3.Distance(transform.position, endLink) < disconnectMargin)
         {
             agent.Warp(endLink);
