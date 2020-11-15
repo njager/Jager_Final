@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if (agent.isOnOffMeshLink)
         {
-            agent.CompleteOffMeshLink();
+            CompleteLink();
         }
     }
 
@@ -45,5 +45,7 @@ public class PlayerController : MonoBehaviour
         Vector3 endLink = agent.currentOffMeshLinkData.endPos;
         float linkDistance = Vector3.Distance(startLink, endLink);
         endLink.y = agent.currentOffMeshLinkData.endPos.y + 1;
+
+        transform.position = Vector3.Lerp(transform.position, endLink, linkDistance / interpolantValue);
     }
 }
