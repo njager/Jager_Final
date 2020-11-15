@@ -35,7 +35,7 @@ public class Trigger : MonoBehaviour
         isPlayerRestored = false;
     }
 
-    //reverses trigger aciton
+    //reverses trigger action
     void RestorePlayer()
     {
         player.DisableCleanMove();
@@ -51,9 +51,24 @@ public class Trigger : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    //determines whether player is ready to be enabled ; called last every frame
+    private void LateUpdate()
     {
-        
+        if (targetAnimator.IsInTransition(0))
+        {
+            Debug.Log("Player activated trigger " + name);
+        }
+        else
+        {
+            if (!isPlayerRestored)
+            {
+                RestorePlayer();
+            }
+            else
+            {
+                Debug.Log("Player is restored by " + name);
+            }
+        }
     }
+
 }
