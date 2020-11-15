@@ -603,8 +603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd242b733a26574d84278c52be443cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interpolantValue: 100
-  disconnectMargin: 1.5
+  interpolantValue: 400
+  disconnectMargin: 1.75
 --- !u!1 &1803649701
 GameObject:
   m_ObjectHideFlags: 0
