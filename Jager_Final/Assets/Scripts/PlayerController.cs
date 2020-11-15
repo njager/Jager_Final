@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
     //member variables
     private NavMeshAgent agent;
     private RaycastHit clickInfo = new RaycastHit();
+    private Vector3 storedTarget;
+
+    //public variables
+    public float interpolantValue = 100;
+    public float disconnectMargin = 1.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +24,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        storedTarget = agent.pathEndPosition;
+
         if (Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
