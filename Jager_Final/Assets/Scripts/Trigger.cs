@@ -16,7 +16,13 @@ public class Trigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetAnimator = target.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        if(triggerVariable == null)
+        {
+            Debug.LogWarning(name + " has no supplied trigger variable. Nothing will be triggered");
+        }
     }
 
     // Update is called once per frame
