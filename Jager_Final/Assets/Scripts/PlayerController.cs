@@ -60,4 +60,18 @@ public class PlayerController : MonoBehaviour
             agent.SetDestination(storedTarget);
         }
     }
+
+    //to be called by the envrionment when motion is triggered
+    public void EnableCleanMove(Transform parentTransform)
+    {
+        transform.SetParent(parentTransform);
+        agent.enabled = false;
+    }
+
+    //called when motion is ended
+    public void DisableCleanMove()
+    {
+        transform.SetParent(null);
+        agent.enabled = true;
+    }
 }
