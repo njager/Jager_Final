@@ -369,6 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108322406}
   - component: {fileID: 1108322407}
+  - component: {fileID: 1108322408}
   m_Layer: 0
   m_Name: PlatformTop
   m_TagString: Untagged
@@ -420,6 +421,25 @@ MonoBehaviour:
   m_VoxelSize: 0.022
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 018715c7fdab72b4fbc0165ef093b542, type: 2}
+--- !u!95 &1108322408
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108322405}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849ea569745c36e46bf993754000adb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1149234231
 GameObject:
   m_ObjectHideFlags: 0
