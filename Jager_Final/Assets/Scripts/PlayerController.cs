@@ -31,4 +31,12 @@ public class PlayerController : MonoBehaviour
             agent.CompleteOffMeshLink();
         }
     }
+
+    void CompleteLink()
+    {
+        Vector3 startLink = agent.currentOffMeshLinkData.startPos;
+        Vector3 endLink = agent.currentOffMeshLinkData.endPos;
+        float linkDistance = Vector3.Distance(startLink, endLink);
+        endLink.y = agent.currentOffMeshLinkData.endPos.y + 1;
+    }
 }
