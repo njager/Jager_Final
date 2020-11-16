@@ -64,10 +64,10 @@ public class Trigger : MonoBehaviour
             {
                 RestorePlayer();
             }
-            else
+            /*else
             {
                 Debug.Log("Player is restored by " + name);
-            }
+            }*/
         }
     }
 
