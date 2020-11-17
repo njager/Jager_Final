@@ -56,7 +56,7 @@ public class Trigger : MonoBehaviour
     {
         if (targetAnimator.IsInTransition(0))
         {
-            Debug.Log("Player activated trigger " + name);
+            //Debug.Log("Player activated trigger " + name);
         }
         else
         {
