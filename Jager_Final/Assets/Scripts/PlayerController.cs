@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
@@ -73,5 +74,13 @@ public class PlayerController : MonoBehaviour
     {
         transform.SetParent(null);
         agent.enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Win"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
