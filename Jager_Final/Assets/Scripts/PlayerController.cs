@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent agent;
     private RaycastHit clickInfo = new RaycastHit();
     private Vector3 storedTarget;
+    private float endTimer = 0;
+    private bool playerWon;
 
     //public variables
     public float interpolantValue = 100;
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        endTimer = 0;
+        playerWon = false;
     }
 
     // Update is called once per frame
@@ -39,6 +43,15 @@ public class PlayerController : MonoBehaviour
         if (agent.isOnOffMeshLink)
         {
             CompleteLink();
+        }
+        //check if it's been long enough since player finished the level
+        if (playerWon == true)
+        {
+            endTimer += Time.deltaTime;
+            if (endTimer >= 5f)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 
@@ -80,7 +93,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Win"))
         {
-            SceneManager.LoadScene(0);
+            print("Good job! You beat the level.");
+            playerWon = true;
         }
     }
 }
