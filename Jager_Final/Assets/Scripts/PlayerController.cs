@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         if (playerWon == true)
         {
             endTimer += Time.deltaTime;
-            if (endTimer >= 5f)
+            if (endTimer >= 2f)
             {
                 SceneManager.LoadScene(0);
             }
