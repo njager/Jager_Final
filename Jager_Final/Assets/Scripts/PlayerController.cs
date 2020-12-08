@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         if (playerWon == true)
         {
             endTimer += Time.deltaTime;
-            if (endTimer >= 2f)
+            if (endTimer >= 3f)
             {
                 SceneManager.LoadScene(0);
             }
