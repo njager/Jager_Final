@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     //public variables
     public float interpolantValue = 100;
     public float disconnectMargin = 1.5f;
+    public ParticleSystem particleSnow;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +95,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Win"))
         {
             print("Good job! You beat the level.");
+            particleSnow.Play();
             playerWon = true;
         }
     }
