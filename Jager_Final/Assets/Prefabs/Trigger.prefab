@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   triggerVariable: H2Active
+  SFXplatform: {fileID: 8300000, guid: 838753808ea74b748b3327650e862ccd, type: 3}
 --- !u!82 &6271943126288754557
 AudioSource:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 838753808ea74b748b3327650e862ccd, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

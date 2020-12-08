@@ -7,17 +7,21 @@ public class Trigger : MonoBehaviour
     //public variables
     public GameObject target;
     public string triggerVariable;
+    public AudioClip SFXplatform;
 
     //private variables
     private PlayerController player;
     private Animator targetAnimator;
     private bool isPlayerRestored;
+    AudioSource triggerSource;
 
     // Start is called before the first frame update
     void Start()
     {
         targetAnimator = target.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        triggerSource = GetComponent<AudioSource>();
+
 
         if(triggerVariable == null)
         {
@@ -30,6 +34,7 @@ public class Trigger : MonoBehaviour
     {
         bool targetVar = targetAnimator.GetBool(triggerVariable);
         targetAnimator.SetBool(triggerVariable, !targetVar);
+        triggerSource.Play();
 
         player.EnableCleanMove(target.transform);
         isPlayerRestored = false;
@@ -48,6 +53,7 @@ public class Trigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             TriggerAction();
+            
         }
     }
 
