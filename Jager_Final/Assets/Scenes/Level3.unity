@@ -6123,19 +6123,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978781377813781778, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7978781377813781778, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7978781377813781778, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7978781377813781778, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7978781377813781778, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
       propertyPath: m_RootOrder
