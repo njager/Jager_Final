@@ -13,19 +13,21 @@ public class PlayerController : MonoBehaviour
     private Vector3 storedTarget;
     private float endTimer = 0;
     private bool playerWon;
-
+    private Rigidbody rB;
+    
     //public variables
     public float interpolantValue = 100;
     public float disconnectMargin = 1.5f;
     public ParticleSystem particleSnow;
-    public bool IsWalking;
     public AudioSource winSource;
     public AudioClip SFXcheer;
+    public Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        rB = GetComponent<Rigidbody>();
         endTimer = 0;
         playerWon = false;
     }
@@ -35,6 +37,17 @@ public class PlayerController : MonoBehaviour
     {
         storedTarget = agent.pathEndPosition;
        
+        //checks if the player is walking or not
+        if (!(Mathf.Approximately(agent.velocity.x, 0)))
+        {
+            playerAnim.SetBool("IsWalking", true);
+            print("Walking!");
+        }
+        else
+        {
+            playerAnim.SetBool("IsWalking", false);
+            print("Standing!");
+        }
 
         //checks for mouse input and location, then sends player to mouse click
         if (Input.GetMouseButtonDown(0))
@@ -49,6 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             CompleteLink();
         }
+
         //check if it's been long enough since player finished the level
         if (playerWon == true)
         {
@@ -94,6 +108,7 @@ public class PlayerController : MonoBehaviour
         agent.enabled = true;
     }
 
+    //check if player has hit the win trigger
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Win"))

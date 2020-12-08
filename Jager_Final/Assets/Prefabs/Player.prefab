@@ -137,9 +137,9 @@ MonoBehaviour:
   interpolantValue: 100
   disconnectMargin: 1.5
   particleSnow: {fileID: 0}
-  IsWalking: 0
   winSource: {fileID: 0}
   SFXcheer: {fileID: 8300000, guid: 1139c5cb6db57a24a9e2bf6a506c4383, type: 3}
+  playerAnim: {fileID: 7849468666720001085}
 --- !u!54 &4238030424610568322
 Rigidbody:
   m_ObjectHideFlags: 0
