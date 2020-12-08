@@ -41,12 +41,10 @@ public class PlayerController : MonoBehaviour
         if (!(Mathf.Approximately(agent.velocity.x, 0)))
         {
             playerAnim.SetBool("IsWalking", true);
-            print("Walking!");
         }
         else
         {
             playerAnim.SetBool("IsWalking", false);
-            print("Standing!");
         }
 
         //checks for mouse input and location, then sends player to mouse click
