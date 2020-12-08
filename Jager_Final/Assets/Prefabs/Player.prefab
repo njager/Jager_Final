@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4238030424610568320}
   - component: {fileID: 4238030424610568321}
   - component: {fileID: 4238030424610568322}
+  - component: {fileID: 8250015089084094453}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -116,6 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interpolantValue: 100
   disconnectMargin: 1.5
+  particleSnow: {fileID: 0}
+  IsWalking: 0
 --- !u!54 &4238030424610568322
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,6 +135,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!81 &8250015089084094453
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238030424610568331}
+  m_Enabled: 1
 --- !u!1001 &8209042887824627287
 PrefabInstance:
   m_ObjectHideFlags: 0
