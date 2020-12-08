@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     public float disconnectMargin = 1.5f;
     public ParticleSystem particleSnow;
     public bool IsWalking;
+    public AudioSource triggerSource;
+    public AudioSource winSource;
+    public AudioClip SFXcheer;
+    public AudioClip SFXplatform;
 
     // Start is called before the first frame update
     void Start()
