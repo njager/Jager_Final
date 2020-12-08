@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Win"))
         {
             print("Good job! You beat the level.");
+            winSource.Play();
             particleSnow.Play();
             playerWon = true;
         }

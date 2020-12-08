@@ -819,6 +819,10 @@ PrefabInstance:
       propertyPath: winSource
       value: 
       objectReference: {fileID: 177904615}
+    - target: {fileID: 4238030424610568321, guid: f5b78373e0cd15e449c22ddce96f04d5, type: 3}
+      propertyPath: particleSnow
+      value: 
+      objectReference: {fileID: 7978781377719897998}
     - target: {fileID: 4238030424610568327, guid: f5b78373e0cd15e449c22ddce96f04d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1052,3 +1056,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
+--- !u!198 &7978781377719897998 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2943773134079572892, guid: 41aa2a0f9b2a2bb4f826357a12a772b6, type: 3}
+  m_PrefabInstance: {fileID: 7978781377719897997}
+  m_PrefabAsset: {fileID: 0}
