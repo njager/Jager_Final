@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float interpolantValue = 100;
     public float disconnectMargin = 1.5f;
     public ParticleSystem particleSnow;
+    public bool IsWalking;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         storedTarget = agent.pathEndPosition;
+       
 
         //checks for mouse input and location, then sends player to mouse click
         if (Input.GetMouseButtonDown(0))
