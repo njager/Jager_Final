@@ -22,7 +22,6 @@ public class Trigger : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         triggerSource = GetComponent<AudioSource>();
 
-
         if(triggerVariable == null)
         {
             Debug.LogWarning(name + " has no supplied trigger variable. Nothing will be triggered");
@@ -53,7 +52,6 @@ public class Trigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             TriggerAction();
-            
         }
     }
 
